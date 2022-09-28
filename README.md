@@ -19,14 +19,18 @@ To call function inside HTML need little hack using
 
 Suggest do not use &apos; because it will not work on html4 or old browser. 
 
-Call function with JSON inside HTML 
+Call function with JSON with HTML 
 ```
 // data from js
 <script>
-var data = {var1: "value 2", var2: 123};
+var data2 = {var1: "value 2", var2: 123};
+var new_data = JSON.stringify(data2).replace(/'/g, '&#39').replace(/"/g, '&quot;');
+
+var button = '<button onclick="panggil(&#39data&#39,' + new_data + ')"><i class="fa fa-eye"></i></button>';
+
 </script>
 
 // load in html 
-<button onclick="panggil(' + index.row + ',' + JSON.stringify(data).replace(/'/g, '&#39').replace(/"/g, '&quot;')+')">Button</button>
+<button onclick="panggil('' new data)">Button</button>
 
 ```
