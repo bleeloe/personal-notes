@@ -3,7 +3,7 @@ My notes for coding...
 
 ## JavaScript pass JSON through parameter's function 
 
-```
+```javascript
 // function to call 
 function panggil(a,b){
   console.log(a);
@@ -20,7 +20,7 @@ To call function inside HTML need little hack using
 Suggest do not use &apos; because it will not work on html4 or old browser. 
 
 Call function with JSON with HTML 
-```
+```javascript
 // data from js
 <script>
 var data2 = {var1: "value 2", var2: 123};
@@ -39,7 +39,7 @@ var button = '<button onclick="panggil(&#39data&#39,' + new_data + ')"><i class=
 
 ### SUM column on table 
 sum html table easy with this function 
-```
+```javascript
 function sumColumn(classSum,idTarget,callback){
     var row = document.getElementsByClassName(classSum), sum = 0;
     for(var i = 0; i < row.length; i++)
@@ -62,7 +62,7 @@ function sumColumn(classSum,idTarget,callback){
 
 
 ### Window PopUp on center 
-```
+```javascript
 window.popup = function (url, title, width, height) {
     var left = (window.screen.width / 2) - ((width / 2) + 0 );
     var top = (window.screen.height / 2) - ((height / 2) + 50);
@@ -77,7 +77,7 @@ window.popup = function (url, title, width, height) {
 
 ### Dynamic table 
 copy everyting on row with easy
-```
+```javascript
 function addRow(tableID,setEmpty,selector) {
     tableID = (typeof tableID !== 'undefined') ?  tableID : '';
     setEmpty = (typeof setEmpty !== 'undefined') ?  setEmpty : true;
@@ -147,7 +147,7 @@ function deleteRow(tableID, rowMin) {
 
 
 ### Paste Number Only 
-```
+```javascript
 $('#app').on('keyup', '.clean_paste_number',function(){
 	var r = $(this).val().replace(/[^\d.-]/g,'');
 	$(this).val(r);
@@ -159,7 +159,7 @@ $('#app').on('keyup', '.clean_paste_number',function(){
 
 ### Display Servertime Realtime
 write server time to `<span id="servertime"><?php echo $servertime ?></span>` then put these JS 
-```
+```javascript
 var currenttime = document.getElementById("servertime").innerHTML;
 var montharray = new Array("Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agus","Sep","Okt","Nov","Des");
 var serverdate = new Date(currenttime);
@@ -180,7 +180,7 @@ window.onload=function(){
 
 ### Click Input selection focus 
 select text when click the input 
-```
+```javascript
 $("#app").on('click focus','input.click-focus',function () {      
    ($(this).val() == 0) ? $(this).val('') : ''; $(this).select();
 });
