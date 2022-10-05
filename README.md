@@ -20,7 +20,7 @@ To call function inside HTML need little hack using
 Suggest do not use &apos; because it will not work on html4 or old browser. 
 
 Call function with JSON with HTML 
-```javascript
+```html
 // data from js
 <script>
 var data2 = {var1: "value 2", var2: 123};
